@@ -2,8 +2,6 @@ import fetchIntercept from 'fetch-intercept';
 import  {useNavigate} from "react-router-dom";
 
 let actual_request
-let without_auth=['api/feedback/', 'api/shop/', 'auth/jwt/create/', 'auth/users/', '/auth/users/activation/', 'auth/jwt/refresh/', 'api/markets/', '/api/commentary/list/', '/auth/users/reset_password/', '/auth/users/reset_password_confirm/', '/auth/social/o/google-oauth2/?redirect_uri=http://127.0.0.1:8000/googleauth', '/auth/social/o/google-oauth2/']
-let without_auth_params=[RegExp('activate')]
 
 function refresh(base_response){
   return new Promise((resolve, reject) => {
