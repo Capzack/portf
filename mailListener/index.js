@@ -34,8 +34,6 @@ class MailListener{
 
 
         this.mailListener.on("mail", (function (mail, seqno, attributes){
-            // console.log(attributes ? attributes.uid : null)
-            // console.log(this.lastMailId)
             if(!attributes){
                 return null
             }
