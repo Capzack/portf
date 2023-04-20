@@ -24,10 +24,6 @@ class MailListener{
             console.log("imapConnected");
         });
 
-        // this.mailListener.on("mailbox", function(mailbox){
-        //     console.log("Total number of mails: ", mailbox.messages.total); // this field in mailbox gives the total number of emails
-        // });
-
         this.mailListener.on("server:disconnected", function(){
             console.log("imapDisconnected");
         });
