@@ -1,0 +1,111 @@
+.main-menu{
+    position: fixed;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    top: 100px;
+    left: 0;
+    height: calc(100% - 100px);
+    padding: 15px;
+    transition: var(--menu-open-duration);
+}
+
+.main-menu::-webkit-scrollbar{
+    display: none;
+}
+
+.main-menu::-webkit-scrollbar {
+    width: 0 !important
+}
+
+.main-menu__show{
+    width: 280px;
+}
+
+.main-menu__hide{
+    width: 71px;
+}
+
+.main-menu__header{
+    font-weight: 700;
+    transition: height calc(var(--menu-open-duration) - 200) ease;
+}
+
+.main-menu__header__show{
+    transform: scaleY(1);
+    height: 18px;
+}
+
+.main-menu__header__hide{
+    transform: scaleY(0);
+    height: 0;
+}
+
+.main-menu__item{
+    padding: 10px 8px;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    column-gap: 7px;
+    border-radius: 12px;
+    transition: background-color 300ms ease-in;
+    cursor: pointer;
+    margin: 5px 0 0;
+}
+
+.main-menu__item:hover{
+    background-color: var(--main-blue-color);
+}
+
+.main-menu__item>img{
+    width: 25px;
+    height: 25px;
+}
+
+.main-menu__item__active{
+    background-color: var(--main-blue-color);
+}
+
+.main-menu__item-text{
+    width: 400px;
+}
+
+.main-menu__item-text__active{
+    opacity: 1;
+}
+
+.main-menu__item-text__hide{
+    opacity: 0;
+}
+
+.subsection-container{
+    margin-left: 25px;
+    border-left: 1px inset var(--main-cyan-blue-color);
+    transition: transform 300ms ease-in;
+    transform-origin:top;
+    overflow: hidden;
+}
+
+.subsection-container__hide{
+    transform: scaleY(0);
+    max-height: 0;
+}
+
+.subsection-container__show{
+    transform: scaleY(1);
+}
+
+.subsection-container__subsection-item{
+    margin: 5px 0 5px 2px;
+    padding: 5px 8px;
+    display: flex;
+    align-items: center;
+    column-gap: 7px;
+    border-radius: 12px;
+    transition: background-color var(--menu-open-duration);
+    cursor: pointer;
+}
+
+.subsection-container__subsection-item:hover{
+    background-color: var(--main-blue-color);
+}
